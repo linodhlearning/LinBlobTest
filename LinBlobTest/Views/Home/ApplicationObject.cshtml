@@ -1,0 +1,22 @@
+﻿@model ImageModel
+@{
+    ViewData["Title"] = "Application Object "; 
+}
+<h1>@ViewData["Title"]</h1>
+<form method="post">
+    <p> Application Object based Auth for blob. Load image below</p>
+
+    <div class="row">
+        <div class="col-6">
+            Blob Name:  <input asp-for="BlobName" />
+
+        </div>
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary">Load From Blob</button>
+        </div>
+    </div>
+
+    <div class="img">
+        <img src='@Model.ImageDataUri' class="img-fluid" alt="image from blob" >
+    </div>
+</form>
